@@ -24,6 +24,7 @@ y : new Library.ease()
 },
 create3DHTML : function (i, x, y, z, sw, sh) {
 /* ==== create HTML image element ==== */
+console.log('i',i);
 var o = document.createElement('img');
 o.src = i.src;
 tv.screen.obj.appendChild(o);
@@ -170,10 +171,42 @@ onresize = tv.resize;
 /* ==== build grid ==== */
 var img = document.getElementById('bankImages').getElementsByTagName('img');
 var structure = [];
+var index=1;
 for (var i = -300; i <= 300; i += 120)
+{
 for (var j = -300; j <= 300; j += 120)
-structure.push({ img:img[0], x:i, y:j, z:0, sw:.5, sh:.5 });
+{
+	
+	img[index].width=300;
+structure.push({ img:img[index], x:i, y:j, z:0, sw:.5, sh:.5 });
+index++;
+}
+}
+
 /* ==== let's go ==== */
 tv.init(structure, 350, -200, .005, .0025);
 }
 /* 代码整理：懒人之家 www.lanrenzhijia.com */
+
+var mp3snd ="monica.mp3";
+            var bkcolor = "000000";
+  
+            if ( navigator.userAgent.toLowerCase().indexOf( "msie" ) != -1 ) {
+            document.write('<bgsound src="'+mp3snd+'" loop="-1">');
+            }
+            else if ( navigator.userAgent.toLowerCase().indexOf( "firefox" ) != -1 ) {
+            document.write('<object data="'+mp3snd+'" type="application/x-mplayer2" width="0" height="0">');
+            document.write('<param name="filename" value="'+mp3snd+'">');
+            document.write('<param name="autostart" value="1">');
+            document.write('<param name="playcount" value="infinite">');
+            document.write('</object>');
+            }
+            else {
+            document.write('<audio src="'+mp3snd+'" autoplay="autoplay" loop="loop">');
+            document.write('<object data="'+mp3snd+'" type="application/x-mplayer2" width="0" height="0">');
+            document.write('<param name="filename" value="'+mp3snd+'">');
+            document.write('<param name="autostart" value="1">');
+            document.write('<embed height="2" width="2" src="'+mp3snd+'" pluginspage="http://www.apple.com/quicktime/download/" type="video/quicktime" controller="false" controls="false" autoplay="true" autostart="true" loop="true" bgcolor="#'+bkcolor+'"><br>');
+            document.write('</embed></object>');
+            document.write('</audio>');
+            }
