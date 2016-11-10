@@ -188,25 +188,25 @@ tv.init(structure, 350, -200, .005, .0025);
 }
 /* 代码整理：懒人之家 www.lanrenzhijia.com */
 
-var mp3snd ="monica.mp3";
-            var bkcolor = "000000";
+// var mp3snd ="monica.mp3";
+//             var bkcolor = "000000";
   
-            if ( navigator.userAgent.toLowerCase().indexOf( "msie" ) != -1 ) {
-            document.write('<bgsound src="'+mp3snd+'" loop="-1">');
-            }
-            else if ( navigator.userAgent.toLowerCase().indexOf( "firefox" ) != -1 ) {
-            document.write('<object data="'+mp3snd+'" type="application/x-mplayer2" width="0" height="0">');
-            document.write('<param name="filename" value="'+mp3snd+'">');
-            document.write('<param name="autostart" value="1">');
-            document.write('<param name="playcount" value="infinite">');
-            document.write('</object>');
-            }
-            else {
-            document.write('<audio src="'+mp3snd+'" autoplay="autoplay" loop="loop">');
-            document.write('<object data="'+mp3snd+'" type="application/x-mplayer2" width="0" height="0">');
-            document.write('<param name="filename" value="'+mp3snd+'">');
-            document.write('<param name="autostart" value="1">');
-            document.write('<embed height="2" width="2" src="'+mp3snd+'" pluginspage="http://www.apple.com/quicktime/download/" type="video/quicktime" controller="false" controls="false" autoplay="true" autostart="true" loop="true" bgcolor="#'+bkcolor+'"><br>');
-            document.write('</embed></object>');
-            document.write('</audio>');
-            }
+//             if ( navigator.userAgent.toLowerCase().indexOf( "msie" ) != -1 ) {
+//             document.write('<bgsound src="'+mp3snd+'" loop="-1">');
+//             }
+//             else if ( navigator.userAgent.toLowerCase().indexOf( "firefox" ) != -1 ) {
+//             document.write('<object data="'+mp3snd+'" type="application/x-mplayer2" width="0" height="0">');
+//             document.write('<param name="filename" value="'+mp3snd+'">');
+//             document.write('<param name="autostart" value="1">');
+//             document.write('<param name="playcount" value="infinite">');
+//             document.write('</object>');
+//             }
+//             else {
+//             document.write('<audio src="'+mp3snd+'" autoplay="autoplay" loop="loop">');
+//             document.write('<object data="'+mp3snd+'" type="application/x-mplayer2" width="0" height="0">');
+//             document.write('<param name="filename" value="'+mp3snd+'">');
+//             document.write('<param name="autostart" value="1">');
+//             document.write('<embed height="2" width="2" src="'+mp3snd+'" pluginspage="http://www.apple.com/quicktime/download/" type="video/quicktime" controller="false" controls="false" autoplay="true" autostart="true" loop="true" bgcolor="#'+bkcolor+'"><br>');
+//             document.write('</embed></object>');
+//             document.write('</audio>');
+//             }
